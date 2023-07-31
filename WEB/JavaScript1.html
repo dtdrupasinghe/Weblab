@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 1</title>
+</head>
+<body>
+    <h2>Question 1</h2>
+    <button id="btn1">Question 1</button>
+    <h2>Question 2</h2>
+    <button id="btn2">Question 2</button>
+    <br><br>
+    <h2>Question 3</h2>
+    <button id="btn_red" class="btn">RED</button>
+    <button id="btn_green" class="btn">GREEN</button>
+    <button id="btn_blue" class="btn">BLUE</button>
+    <h2 id="sum"></h2>
+    <h2 id="avg"></h2>
+
+    <h2>Question 4</h2>
+    <button id="q4">Question 4</button>
+
+    <h2>Question 5</h2>
+    <button id="q5">Question 5</button>
+
+    <h2>Question 6</h2>
+    <button id="q6">Google</button>
+
+    <h2>Question 7</h2>
+    <button id="q7">Question 7</button>
+
+    <h2>Question 8</h2>
+    <button id="q8">Question 8</button>
+
+    <script>
+        document.getElementById("btn1").onclick = () =>{
+            window.alert("This is alert");
+        }
+        
+        document.getElementById("btn2").onclick = () => {
+            var total = 0 ;
+            let sub = 1;
+            for(let i = 0 ; i <5 ; i++){
+                total +=parseInt(prompt("Enter mark " + sub++));
+            }
+            (total/5 > 30) ? window.alert("Congratulations! You passed.") : window.alert("Better luck next time.");
+
+            document.getElementById("sum").innerHTML = "Total: " + total;
+            document.getElementById("avg").innerHTML = "Average: " + total/5;            
+        }
+
+        document.getElementById("btn_red").onmouseover = () => {
+            document.getElementById("btn_red").style.backgroundColor = "red";
+        } 
+        document.getElementById("btn_red").onmouseout = () => {
+            document.getElementById("btn_red").style.backgroundColor = "white";
+        } 
+
+        document.getElementById("btn_green").onmouseover = () => {
+            document.getElementById("btn_green").style.backgroundColor = "green";
+        } 
+        document.getElementById("btn_green").onmouseout = () => {
+            document.getElementById("btn_green").style.backgroundColor = "white";
+        } 
+        document.getElementById("btn_blue").onmouseover = () => {
+            document.getElementById("btn_blue").style.backgroundColor = "blue";
+        }
+        document.getElementById("btn_blue").onmouseout = () => {
+            document.getElementById("btn_blue").style.backgroundColor = "white";
+        }
+
+        document.getElementById("q4").onclick = () => {
+            var radius = prompt("Enter the radius of the circle");
+            alert("Area : " + Math.PI * radius * radius);
+        }
+        
+        document.getElementById("q5").onclick = () => {
+            var day = parseInt(prompt("Enter a number from 1-7"));
+            var dayName = "";
+            switch (day) {
+                case 1:
+                dayName = "Monday";
+                break;
+                case 2:
+                dayName = "Tuesday";
+                break;
+                case 3:
+                dayName = "Wednesday";
+                break;
+                case 4:
+                dayName = "Thursday";
+                break;
+                case 5:
+                dayName = "Friday";
+                break;
+                case 6:
+                dayName = "Saturday";
+                break;
+                case 7:
+                dayName = "Sunday";
+                break;
+                default:
+                dayName = "Invalid input";
+                break;
+            }
+
+            alert(dayName);
+        }
+
+        document.getElementById("q6").onclick = () => {
+            var answer = confirm("Would you like to redirect to Google?");
+            (answer == true)? window.location.href = "https://www.google.com": alert("You decied to stay here");
+            
+        }
+        document.getElementById("q7").onclick = () => {
+            var number1 = parseInt(prompt("Enter the first number"));
+            var number2 = parseInt(prompt("Enter the second number"));
+            var operator = prompt("Enter the operator (+, -, *, /)");
+
+            var result = 0;
+            switch (operator) {
+                case "+":
+                result = number1 + number2;
+                break;
+                case "-":
+                result = number1 - number2;
+                break;
+                case "*":
+                result = number1 * number2;
+                break;
+                case "/":
+                result = number1 / number2;
+                break;
+                default:
+                alert("Invalid operator");
+                break;
+            }
+
+            alert(result);
+        }
+
+        document.getElementById("q8").onclick = () => {
+            var nic = prompt("Enter your NIC");
+            alert(nic.substring(0, 4));
+            
+        }
+
+
+    </script>
+
+
+</body>
+</html>

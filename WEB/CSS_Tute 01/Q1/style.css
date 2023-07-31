@@ -1,0 +1,28 @@
+body{
+  background: rgba(0, 0, 0, 0.5);
+}
+
+h1{
+  color: rgb(0, 0, 0);
+}
+.quote{
+  width: 20%;
+  margin-top: 25vh;
+  padding: 5%;
+  background: rgb(254, 255, 254);
+}
+.content{
+  font-size: 30px;
+  text-align: left;
+  color: rgba(144, 8, 8, 0.929);
+}
+.author{
+  float: right;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}

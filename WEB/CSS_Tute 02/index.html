@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <title>Ecommerce site</title>
+  <style>
+    /* navigation start */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation a::after{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    background-color:rgb(38, 37, 37);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogIn-popup{
+    width: 100px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogIn-popup:hover{
+    background: rgb(38, 37, 37);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+/* navigation end */
+
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Logo</h2>
+    <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Faq</a>
+        <a href="#">Loan</a>
+        <button><a href="#">Login</a></button>
+    </nav>
+</header>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.label{
+  font-size: 20px;
+  padding: 0.5%;
+  color: white;
+}
+
+input{
+  font-size: 20px;
+}
+h2{
+  background-color: #071952;
+  padding: 3px;
+  border-radius: 10px;
+  color: #97FEED;
+}
+
+.signupform{
+  text-align: center;
+  padding: 3px;
+  width:500px;
+  margin: auto auto auto auto;
+  background-color:#35A29F;
+  border-radius: 10px;
+}
+
+button {
+  background-color:  #071952;
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 10px 0 10px 0;
+  color: #97FEED;
+}
